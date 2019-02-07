@@ -4,6 +4,8 @@ def spiral (n):
 
     start_line = n * 10
 
+
+
     if n <= 1:
         return
 
@@ -19,7 +21,7 @@ def spiral (n):
     spiral(n-1)
 
 
-t.speed(0)
-spiral(20)
+t.speed(1)
+spiral(30)
 t.hideturtle()
 t.done()
