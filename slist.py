@@ -17,7 +17,7 @@ class SList:
     def size(self): return self.size
 
 
-    def insert_front(self, item):
+    def push(self, item):
 
         if self.is_empty():
             new_node = self.Node(item, None)
@@ -36,14 +36,17 @@ class SList:
         self.size += 1
 
 
-    def delete_front(self):
+    def pop(self):
 
         if self.is_empty():
             print("there is no item to delete.")
+            return
 
         else:
-            self.head = self.head.next
+            h = self.head
+            self.head = h.next
             self.size -= 1
+            return h.item
 
 
     def delete_after(self, p):
