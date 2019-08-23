@@ -56,13 +56,44 @@ class SList:
 
             h = h.next
 
+    def merge(self, l2):
 
-s = SList()
-s.insert_front("A")
-s.insert_front("B")
+        h1 = self.head
+        h2 = l2.head
 
-i = s.search("A")
+        if h1.item > h2.item:
+            self.insert_front(h2.item)
+            h2 = h2.next
+            h1 = self.head
 
-s.insert_after("C", i)
+        while h2 and h1.next:
+            if h1.next.item > h2.item:
+                self.insert_after(h2.item, h1)
+                h2 = h2.next
 
-s.print_list()
+            else:
+                h1=h1.next
+
+        while h2:
+            self.insert_after(h2.item, h1)
+            h2 = h2.next
+            h1 = h1.next
+
+
+
+
+
+
+s1 = SList()
+s1.insert_front(40)
+s1.insert_front(7)
+s1.insert_front(3)
+
+s2 = SList()
+s2.insert_front(4)
+s2.insert_front(2)
+
+
+s1.merge(s2)
+
+s1.print_list()
