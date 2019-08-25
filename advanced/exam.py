@@ -8,10 +8,10 @@ def solution(answers):
         for i in range(3):
             if a == p[i][idx%len(p[i])]: cnt[i] += 1
     
-
-    print(cnt)
-
-
+    m = max(cnt)
+    res = [i+1 for i,j in enumerate(cnt) if j==m]
+    
+    return res
 
 
 a = [1,3,2,4,2]
