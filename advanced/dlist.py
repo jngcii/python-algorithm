@@ -66,3 +66,7 @@ print()
 d.delete_front()
 d.delete_back()
 d.print_list()
+
+a = [2,4,5,7]
+
+print(a[1-2])
