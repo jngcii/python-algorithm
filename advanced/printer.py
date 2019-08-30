@@ -11,7 +11,7 @@ def solution(priorities, location):
             else: location -= 1
 
         else:
-            if location == i: return locat
+            if location == i: return location
             i += 1
         
     print(priorities)
