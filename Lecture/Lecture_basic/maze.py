@@ -31,7 +31,6 @@ def bsf(y, x, cnt):
             if 0 <= ny < n and 0 <= nx < m:
                 if a[ny][nx] == 1 and d[ny][nx]:
                     y, x = ny, nx
-                    d[y][x] = False
                     q.append((y, x))
                     bsf(y, x, cnt + 1)
 
