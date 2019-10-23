@@ -27,6 +27,8 @@ res = 100000000
 
 a = list(range(n))
 
+fa = a[0]
+
 m = 0
 
 for i in range(-1, n-1):
@@ -34,7 +36,7 @@ for i in range(-1, n-1):
 
 res = min(res, m)
 
-while next_permutation(a):
+while next_permutation(a) and a[0] == fa:
     m = 0
 
     for i in range(-1, n-1):
